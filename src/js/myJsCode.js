@@ -1,3 +1,3 @@
-import template from '../main.hbs';
+import template from '../html/index.hbs';
 
 console.log(template, template({name: 'Test'}))
