@@ -78,3 +78,6 @@ build/Release
 node_modules
 dist/js/bundle.js
 dist/css/main.css
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
