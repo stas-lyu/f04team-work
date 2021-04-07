@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
 module.exports = {
     entry: './src/app.js',
@@ -37,9 +38,16 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 loader: 'file-loader',
                 options: {outputPath: 'assets/fonts', publicPath: '../fonts', useRelativePaths: true}
+            },
+            {
+                test: /\.hbs/,
+                loader: 'handlebars-loader',
+                exclude: /(node_modules|bower_components)/
             }
 
         ]
     },
-    plugins: [new MiniCssExtractPlugin()],
+        plugins: [
+            new MiniCssExtractPlugin(),
+        ]
 };
