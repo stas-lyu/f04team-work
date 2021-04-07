@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
-
 module.exports = {
     entry: './src/app.js',
     output: {
@@ -54,11 +53,6 @@ module.exports = {
         ]
     },
         plugins: [
-            new HtmlWebpackPlugin({
-                hash: false,
-                inject: false,
-                template: 'src/html/index.hbs',
-            }),
             new MiniCssExtractPlugin(),
             new HandlebarsPlugin({
                 // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
@@ -94,6 +88,7 @@ module.exports = {
                 onBeforeRender: function (Handlebars, data, filename) {},
                 onBeforeSave: function (Handlebars, resultHtml, filename) {},
                 onDone: function (Handlebars, filename) {}
-            })
+            }),
+            new HtmlWebpackPlugin(),
         ]
 };
