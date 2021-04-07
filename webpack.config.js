@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
 module.exports = {
     entry: './src/app.js',
