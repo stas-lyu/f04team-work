@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel='stylesheet' href='dist/main.css'>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
+<div class="container">
+    <div id="test"></div>
 
+</div>
+<button id="myBtn">Open Modal</button>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+        <span class="close">&times;</span>
+        <br>
+        <input type="file" class="imgs">
+        <input type="text" class="inputTitle">
+        <input type="text" class="inputBody">
+    <button id="btnAddPost">add Post</button>
+  </div>
+</div>
 <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>
